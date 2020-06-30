@@ -31,7 +31,7 @@ def setupEnv() {
 
 	ADOPTOPENJDK_REPO = params.ADOPTOPENJDK_REPO ? params.ADOPTOPENJDK_REPO : "https://github.com/AdoptOpenJDK/openjdk-tests.git"
 	OPENJ9_REPO = params.OPENJ9_REPO ? params.OPENJ9_REPO : "https://github.com/eclipse/openj9.git"
-	TKG_REPO = params.TKG_REPO ? params.TKG_REPO : "https://github.com/AdoptOpenJDK/TKG.git"
+	TKG_REPO = params.TKG_REPO ? params.TKG_REPO : "https://github.com/theresa-m/TKG.git"
 	if (env.SPEC.startsWith('zos')) {
 		ADOPTOPENJDK_REPO = ADOPTOPENJDK_REPO.replace("https://github.com/","git@github.com:")
 		OPENJ9_REPO = OPENJ9_REPO.replace("https://github.com/","git@github.com:")
@@ -43,7 +43,7 @@ def setupEnv() {
 	CLONE_OPENJ9 = params.CLONE_OPENJ9 ? params.CLONE_OPENJ9 : "true"
 	OPENJ9_BRANCH = params.OPENJ9_BRANCH ? params.OPENJ9_BRANCH : "master"
 	CUSTOM_TARGET = params.CUSTOM_TARGET ? params.CUSTOM_TARGET : ""
-	TKG_BRANCH = params.TKG_BRANCH ? params.TKG_BRANCH : "master"
+	TKG_BRANCH = params.TKG_BRANCH ? params.TKG_BRANCH : "asm_8.0.1"
 	TKG_SHA = params.TKG_SHA ? params.TKG_SHA : ""
 	UPSTREAM_JOB_NAME = params.UPSTREAM_JOB_NAME ? params.UPSTREAM_JOB_NAME : ""
 	UPSTREAM_JOB_NUMBER = params.UPSTREAM_JOB_NUMBER ? params.UPSTREAM_JOB_NUMBER : ""

@@ -96,7 +96,7 @@ println "ARCH_OS_LIST: ${ARCH_OS_LIST}"
 ARCH_OS_LIST.each { ARCH_OS ->
  	def ADOPTOPENJDK_REPO = "https://github.com/AdoptOpenJDK/openjdk-tests.git"
 	def OPENJ9_REPO = "https://github.com/eclipse/openj9.git"
-	def TKG_REPO = "https://github.com/AdoptOpenJDK/TKG.git"
+	def TKG_REPO = "https://github.com/theresa-m/TKG.git"
 	def ADOPTOPENJDK_BRANCH = "master"
 
 	JDK_VERSIONS.each { JDK_VERSION ->
@@ -184,7 +184,7 @@ ARCH_OS_LIST.each { ARCH_OS ->
 							stringParam('RELEASE_TAG', "", "SCM tag from which to run tests")
 							stringParam('OPENJDK_SHA', "", "OpenJDK SHA from which to run tests")
 							stringParam('TKG_REPO', TKG_REPO, "TestKitGen git repo. Please use ssh for zos.")
-							stringParam('TKG_BRANCH', "asm_upgrade", "TKG branch")
+							stringParam('TKG_BRANCH', "asm_8.0.1", "TKG branch")
 							stringParam('TKG_SHA', "", "TKG sha")
 							stringParam('UPSTREAM_TEST_JOB_NAME', "", "Auto-populated. Upstream test job name. It will be used together with PARALLEL=Dynamic")
 							stringParam('UPSTREAM_TEST_JOB_NUMBER', "", "Auto-populated. Upstream test job number. It will be used together with PARALLEL=Dynamic")
