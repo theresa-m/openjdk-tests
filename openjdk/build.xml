@@ -167,7 +167,7 @@
 								<property name="regressionRepo" value="git@github.ibm.com:runtimes/${jdkName}.git"/>
 							</then>
 							<else>
-								<property name="regressionRepo" value="https://github.com/ibmruntimes/${jdkName}.git"/>
+								<property name="regressionRepo" value="https://github.com/ibmruntimes/openj9-openjdk-jdk.git"/>
 							</else>
 						</if>
 						<property name="defaultBranch" value=""/>
