@@ -177,6 +177,26 @@
 			<version>9+</version>
 		</versions>
 	</test>
+		<test>
+		<testCaseName>jck-runtime-vm-verifier-all</testCaseName>
+		<variations>
+			<variation>NoOptions</variation>
+		</variations>
+		<command>$(GEN_JTB_GENERIC) tests="vm/verifier" testsuite=RUNTIME; \
+		$(EXEC_RUNTIME_TEST); \
+		$(TEST_STATUS) ; \
+		$(GEN_SUMMARY_GENERIC) tests="vm/verifier" testsuite=RUNTIME
+		</command>
+		<levels>
+			<level>sanity</level>
+		</levels>
+		<groups>
+			<group>jck</group>
+		</groups>
+		<versions>
+			<version>9+</version>
+		</versions>
+	</test>
 	<test>
 		<testCaseName>jck-runtime-vm-verifier-instructions-group1</testCaseName>
 		<variations>
