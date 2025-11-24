@@ -144,24 +144,31 @@
 				<if>
 					<matches string="${JDK_IMPL}" pattern="openj9|ibm"/>
 					<then>
-						<property name="jdkName" value="openj9-openjdk-jdk.valuetypes"/>
-						<!--<if>
+						<if>
 							<equals arg1="${env.ORIGIN_JDK_VERSION}" arg2="next"/>
 							<then>
 								<property name="jdkName" value="openj9-openjdk-jdk"/>
 							</then>
 							<else>
 								<if>
-									<contains string="${SPEC}" substring="zos"/>
+									<equals arg1="${env.ORIGIN_JDK_VERSION}" arg2="Valhalla"/>
 									<then>
-										<property name="jdkName" value="openj9-openjdk-jdk${JDK_VERSION}-zos"/>
+										<property name="jdkName" value="openj9-openjdk-jdk.valuetypes"/>
 									</then>
 									<else>
-										<property name="jdkName" value="openj9-openjdk-jdk${JDK_VERSION}"/>
+										<if>
+											<contains string="${SPEC}" substring="zos"/>
+											<then>
+												<property name="jdkName" value="openj9-openjdk-jdk${JDK_VERSION}-zos"/>
+											</then>
+											<else>
+												<property name="jdkName" value="openj9-openjdk-jdk${JDK_VERSION}"/>
+											</else>
+										</if>
 									</else>
 								</if>
 							</else>
-						</if>-->
+						</if>
 						<if>
 							<contains string="${SPEC}" substring="zos"/>
 							<then>
