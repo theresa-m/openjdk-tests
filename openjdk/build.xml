@@ -175,10 +175,10 @@
 								<property name="regressionRepo" value="git@github.ibm.com:runtimes/${jdkName}.git"/>
 							</then>
 							<else>
-								<property name="regressionRepo" value="https://github.com/ibmruntimes/${jdkName}.git"/>
+								<property name="regressionRepo" value="https://github.com/JasonFengJ9/${jdkName}.git"/>
 							</else>
 						</if>
-						<property name="defaultBranch" value=""/>
+						<property name="defaultBranch" value="mergetmpV2"/>
 					</then>
 					<else>
 						<if>
@@ -201,7 +201,7 @@
 									<then>
 										<echo message="Command passed. Setting repo name to the 'u' version."/>
 										<property name="jdkName" value="jdk${JDK_VERSION}u"/>
-										<property name="defaultBranch" value="-b dev"/>
+										<!--<property name="defaultBranch" value="-b dev"/>-->
 									</then>
 									<else>
 										<property name="jdkName" value="jdk"/>
@@ -210,14 +210,14 @@
 											<arg value="https://api.adoptium.net/v3/info/available_releases"/>
 										</exec> 
 										<propertyregex property="tipVersion" input="${jsonRelease}" regexp='"tip_version":\s*([0-9]+)' select="\1" defaultValue="0"/>				
-										<if>
+										<!--<if>
 											<equals arg1="${JDK_VERSION}" arg2="${tipVersion}"/>
 											<then>
 												<property name="defaultBranch" value="-b dev"/>
 											</then>
 											<else>
 												<property name="defaultBranch" value="-b dev_jdk${JDK_VERSION}"/>
-											</else>
+											</else>-->
 										</if>										
 									</else>
 								</if>
