@@ -217,8 +217,8 @@
 											</then>
 											<else>
 												<property name="defaultBranch" value="-b dev_jdk${JDK_VERSION}"/>
-											</else>-->
-										</if>										
+											</else>
+										</if>-->								
 									</else>
 								</if>
 							</else>
