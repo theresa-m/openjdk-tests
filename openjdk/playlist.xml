@@ -57,7 +57,8 @@
 			<variation>-XX:ValueTypeFlatteningThreshold=99999 -XX:+EnableArrayFlattening</variation>
 		</variations>
 		<command>$(JAVA_COMMAND) -Xmx512m -jar $(Q)$(TEST_RESROOT)$(D)jtreg$(D)lib$(D)jtreg.jar$(Q) \
-			$(JTREG_BASIC_OPTIONS) $(JDK_NATIVE_OPTIONS) \
+			$(JTREG_BASIC_OPTIONS) \
+			-nativepath:"$(TESTIMAGE_PATH)/hotspot/jtreg/native" \
 			-vmoptions:$(Q)-Xmx512m --patch-module java.base=$(TEST_JDK_HOME)$(D)lib$(D)valueclasses$(D)java.base-valueclasses.jar \
 			--enable-preview -Djdk.debug=release $(JVM_OPTIONS) $(VMOPTION_HEADLESS)$(Q) \
 			$(TIMEOUT_HANDLER) \
