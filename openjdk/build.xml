@@ -202,7 +202,7 @@
 			</and>
 		</condition>
 		<property name="regressionRepo" value="https://github.com/theresa-m/${jdkName}.git" if:set="auto_repo_openj9"/>
-		<property name="defaultBranch" value="-b test_strictfields" if:set="auto_repo_openj9"/>
+		<property name="defaultBranch" value="-b revert_strictfieldstests" if:set="auto_repo_openj9"/>
 
 		<!-- Path B2: Adoptium (not openj9/ibm) -->
 		<condition property="auto_repo_adoptium">
