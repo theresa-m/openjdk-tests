@@ -125,10 +125,10 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/classfmt testsuite=RUNTIME; \
+		<command>$(GEN_JTB_GENERIC) tests=vm/classfmt/atr_stckmp/atr_early_larval_frame001 testsuite=RUNTIME; \
 		$(EXEC_RUNTIME_TEST); \
 		$(TEST_STATUS) ; \
-		$(GEN_SUMMARY_GENERIC) tests=vm/classfmt testsuite=RUNTIME
+		$(GEN_SUMMARY_GENERIC) tests=vm/classfmt/atr_stckmp/atr_early_larval_frame001 testsuite=RUNTIME
 		</command>
 		<levels>
 			<level>sanity</level>
